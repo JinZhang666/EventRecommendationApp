@@ -1,1 +1,2 @@
 # EventRecommend
+# EventRecommendationApp
