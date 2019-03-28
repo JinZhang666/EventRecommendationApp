@@ -38,9 +38,12 @@ public class ItemHistory extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		//traverse the whole history table to get all the items this user like 
 		String userId = request.getParameter("user_id");
+		
+		//Use a json array to hold all the items 
 		JSONArray array = new JSONArray();
 		
 		DBConnection conn = DBConnectionFactory.getConnection();
@@ -48,7 +51,11 @@ public class ItemHistory extends HttpServlet {
 			Set<Item> items = conn.getFavoriteItems(userId);
 			for (Item item : items) {
 				JSONObject obj = item.toJSONObject();
+				// add an extra key-value pair to this item object 
+				// indicates that this object is loved by this user 
 				obj.append("favorite", true);
+				
+				// put the json object into the json array 
 				array.put(obj);
 			}
 			
