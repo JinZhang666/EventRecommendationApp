@@ -22,6 +22,10 @@ Four tables are used
 * categories: Only Store the category corresponding to a specific item // demonstrates the relations between itemId <-> category  
 * history: Store the love history of users on specific item, each entry contains 1 user and 1 item. // demonstrates the relations between userId <-> ItemId
 
+### Search Items 
+* The search functionality is implemented with the help of TicketMaster API, it takes [lat] [long] [term] as parameter to search items in a specific geo range 
+* All the search results are stored in the items table in the database 
+
 ### User Authentication 
 The User Authentication is implemented based on Session. Session Id is bound to a specific Http servlet request, the server side determine if the user who is sending this request has logged in or not by checking if there is a valid session(HttpSession) exists on the server side. 
 
