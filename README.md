@@ -1,4 +1,5 @@
 # EventRecommendationApp
+To visit this website, use:  http://3.17.188.2/Jupiter/
 
 ## Summary 
 This is an Event Search and Recommendation web app. User can search the events 
