@@ -9,6 +9,7 @@ around, and the app will analyze users' taste then push specific envents to the 
 * FrontEnd: HTML|CSS|JavaScript  
 * Backend:JAVA
 * Server:TomcatServer|mySQLServer 
+* Cloud Service: AWS/EC2
 * Event&Tickets Info: TicketsMaster API 
 
 ## Development Tools
